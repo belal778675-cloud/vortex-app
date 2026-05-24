@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billal Vortex FF Tournament</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h2>🏆 Billal Vortex FF Tournament 🏆</h2>
+        
+        <div class="eid-mission-card">
+            <h3>🌙 ঈদ স্পেশাল মিশন ও সালামি! 🎁</h3>
+            <p>আমাদের অ্যাপে <b>১০০ টাকা এন্ট্রি ফি</b>-র স্পেশাল ১৬টি ম্যাচের মধ্যে</p>
+            <p>যেকোনো <b>১৫টি ম্যাচ</b> খেললেই বিল্লাল ভাইয়ের কাছ থেকে পাবেন <b>৫০ টাকা</b> নিশ্চিত ঈদের সালামি! 🎉</p>
+            <button id="eidBtn" onclick="openEidForm()">🎁 সালামি দাবি করুন</button>
+            
+            <div id="eidForm" style="display: none; margin-top: 15px; background: #0f172a; padding: 10px; border-radius: 8px;">
+                <h4>🎉 মিশন তথ্য জমা দিন:</h4>
+                <input type="text" id="eidUID" placeholder="আপনার ফ্রি ফায়ার UID" required>
+                <input type="number" id="matchCount" placeholder="১০০ টাকার কতটি ম্যাচ খেলেছেন? (১৫)" required>
+                <input type="text" id="eidBikash" placeholder="সালামি নেওয়ার বিকাশ নম্বর" required>
+                <button type="button" onclick="sendEidClaim()" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">🔥 সালামি পাঠান বিল্লাল ভাই</button>
+            </div>
+        </div>
+
+        <script>
+            const bikashNumber = "01867154417"; // আপনার বিকাশ নম্বর
+            const matchTitle = "🎮 ঈদ স্পেশাল ম্যাচ #০১ (Mega Map)";
+            const entryFee = "১০০ টাকা";
+            const booyahPrize = "৩০০০ টাকা"; // ৩০০০ টাকা প্রাইজ সেট করা হয়েছে
+            const matchTime = "রাত ০৯:০০ টা";
+        </script>
+
+        <div class="match-card">
+            <h3 id="displayMatchTitle"></h3>
+            <p>💵 এন্ট্রি ফি: <b id="displayEntryFee"></b> | 🎁 প্রাইজ: <b id="displayPrize"></b></p>
+            <p>⏰ সময়: <b id="displayTime"></b></p>
+            
+            <div class="payment-info">
+                <p>📱 বিকাশ পার্সোনাল: <b id="displayBikash"></b></p>
+                <small>(টাকা Send Money করে নিচের ফর্মে তথ্য দিন। ২০ থেকে ১০০০ টাকা পর্যন্ত ডিপোজিট করা যাবে)</small>
+            </div>
+
+            <form id="joinForm">
+                <input type="text" id="playerName" placeholder="আপনার গেমের নাম" required>
+                <input type="text" id="playerUID" placeholder="ফ্রি ফায়ার UID" required>
+                <input type="number" id="depositAmount" placeholder="কত টাকা পাঠিয়েছেন? (২০ - ১০০০)" min="20" max="1000" required>
+                <input type="text" id="lastDigits" placeholder="বিকাশ নম্বরের শেষ ৪ ডিজিট" required>
+                <button type="submit" id="submitBtn">🔥 জয়েন ও ডিপোজিট করুন</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('displayMatchTitle').innerText = matchTitle;
+        document.getElementById('displayEntryFee').innerText = entryFee;
+        document.getElementById('displayPrize').innerText = booyahPrize;
+        document.getElementById('displayTime').innerText = matchTime;
+        document.getElementById('displayBikash').innerText = bikashNumber;
+
+        function openEidForm() {
+            var x = document.getElementById("eidForm");
+            x.style.display = (x.style.display === "none") ? "block" : "none";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
