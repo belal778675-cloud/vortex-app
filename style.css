@@ -1,0 +1,59 @@
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+}
+.app-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+h2 { color: #38bdf8; text-transform: uppercase; font-size: 20px; margin-bottom: 15px; }
+.eid-mission-card {
+    background: linear-gradient(135deg, #047857, #065f46);
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+.eid-mission-card h3 { margin: 0 0 10px 0; color: #fef08a; font-size: 17px; }
+.eid-mission-card p { font-size: 13px; margin: 4px 0; color: #e2e8f0; }
+#eidBtn { background: #f59e0b; color: black; padding: 8px 15px; font-size: 13px; width: auto; font-weight: bold; margin-top: 5px; border: none; border-radius: 5px; cursor: pointer; }
+.match-card {
+    background-color: #1e293b;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+.payment-info {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #f59e0b;
+}
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background-color: #0f172a;
+    color: white;
+}
+button {
+    width: 95%;
+    padding: 12px;
+    background: linear-gradient(135deg, #38bdf8, #0284c7);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover { background: #0284c7; }
